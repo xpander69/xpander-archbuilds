@@ -14,7 +14,7 @@ pkgdesc="Linux Mint Menu for MATE"
 arch=('i686' 'x86_64')
 url="http://packages.linuxmint.com/pool/main/m/mintmenu"
 license=('GPL')
-depends=('pygtk' 'python2-gobject' 'python2-gobject2' 'archlinux-artwork' 'gksu' 'python2-xdg' 'xdg-utils' 'python2-keybinder2' 'python-xlib')
+depends=('pygtk' 'python2-gobject' 'python2-gobject2' 'archlinux-artwork' 'gksu' 'python2-xdg' 'xdg-utils' 'python2-keybinder2' 'python-xlib' 'glib2')
 optdepends=('mate-menu-editor: for editing the gnome menu'
             'mint-translations: translations files'
             'gnome-packagekit: package manager button'
