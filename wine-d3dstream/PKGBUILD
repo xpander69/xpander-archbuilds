@@ -41,6 +41,8 @@ makedepends=(autoconf ncurses bison perl fontforge flex prelink
   openal          lib32-openal
   v4l-utils       lib32-v4l-utils
   alsa-lib        lib32-alsa-lib
+  mesa            lib32-mesa
+  mesa-libgl      lib32-mesa-libgl
 )
 
 optdepends=(
