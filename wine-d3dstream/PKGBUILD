@@ -23,7 +23,6 @@ depends=(
   libxdamage      lib32-libxdamage
   libxi           lib32-libxi
   gettext         lib32-gettext
-  nvidia-libgl    lib32-nvidia-libgl
   desktop-file-utils
 )
 makedepends=(autoconf ncurses bison perl fontforge flex prelink
@@ -58,6 +57,7 @@ openal            lib32-openal
   alsa-plugins    lib32-alsa-plugins
   alsa-lib        lib32-alsa-lib
   oss             cups
+  nvidia-libgl    lib32-nvidia-libgl
   samba
 )
 
