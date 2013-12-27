@@ -1,13 +1,13 @@
 pkgname=wine-d3dstream
-pkgver=1.7.1
+pkgver=1.7.4
 pkgrel=1
 _pkgname=wine
-source=(
-        "http://prdownloads.sourceforge.net/$_pkgname/$_pkgname-$pkgver.tar.bz2"
-        'csmt_patchset.tar.bz2::http://www.winehq.org/pipermail/wine-devel/attachments/20130902/62c705fb/attachment-0001.bin'
-)
-sha1sums=('f3a074c277d2eb0789b807755578afa6ad8ec0ae'
-          'a7ee25e23e156f0f98069275619ce774b189eab0')
+source=("http://prdownloads.sourceforge.net/$_pkgname/$_pkgname-$pkgver.tar.bz2"
+		"csmt-$_pkgname-$pkgver-0.2.patch"
+		"steam.patch")
+sha1sums=('f3ccfb7a6870311f2d85b1cbbcc1f87df409bb6a'
+			'a1025f3c91753b6a64ba46e7f35bef8059bb729f'
+			'0f17189eaa4ed35434fe0bb78917e39cbdb85f18')
 
 pkgdesc="Wine with D3D command stream patches"
 url="http://www.winehq.com"
@@ -79,11 +79,11 @@ prepare() {
   cd "$srcdir/$_pkgname-$pkgver"
 
   # up fps
-  msg2 "Applying patches for fps improvements..."
-  for PATCH in ${srcdir}/cs/*
-  do
-    patch -p1 < $PATCH
-  done
+  msg2 "Applying patch for fps improvements..."
+  patch -p1 < "${srcdir}/csmt-$_pkgname-$pkgver-0.2.patch"
+  msg2 "Applying Steam patch"
+  patch -p1 < "${srcdir}/steam.patch"
+
 }
 build() {
   cd "$srcdir/$_pkgname-$pkgver"
