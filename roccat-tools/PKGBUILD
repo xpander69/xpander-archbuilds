@@ -14,7 +14,7 @@ true && pkgname=('roccat-tools-common'
                  'roccat-tools-pyra'
                  'roccat-tools-savu')
 pkgbase=roccat-tools
-pkgver=0.18.0
+pkgver=1.1.0
 pkgrel=1
 arch=('i686' 'x86_64')
 url="http://roccat.sourceforge.net"
@@ -24,7 +24,7 @@ makedepends=('cmake' 'kmod-roccat')
 conflicts=(kone koneplus pyra roccat)
 source=("http://downloads.sourceforge.net/project/roccat/roccat-tools/roccat-tools-$pkgver.tar.bz2")
 
-md5sums=('6a12ae9535d021ba0c0a65533c3601dd')
+md5sums=('849d93cd031f6037c8efc5be6659669b')
 
 build() {
   cd "$srcdir/$pkgbase-$pkgver"
